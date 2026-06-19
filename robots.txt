@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mhalegabeze.github.io/portal-winscore-com-2/sitemap.xml

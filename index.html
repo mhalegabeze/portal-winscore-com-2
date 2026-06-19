@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>捷报比分 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #fce9d8 0%, #fbd6b0 50%, #f7c28d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.4rem 1.2rem;
+            line-height: 1.6;
+            color: #2e241e;
+        }
+
+        .page {
+            max-width: 840px;
+            width: 100%;
+            background: #fffffffa;
+            backdrop-filter: blur(2px);
+            border-radius: 36px 36px 28px 28px;
+            box-shadow: 0 20px 40px -12px rgba(120, 70, 40, 0.28), 0 8px 18px rgba(0,0,0,0.05);
+            padding: 2.8rem 2.8rem 3.2rem;
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .page {
+                padding: 2rem 1.2rem 2.4rem;
+                border-radius: 28px;
+            }
+        }
+
+        .hero {
+            margin-bottom: 2.4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #bb6b3a, #8f4a24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.1rem;
+            color: #6f4e38;
+            background: #fcf0e7;
+            display: inline-block;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 400;
+            margin-top: 0.2rem;
+        }
+
+        .summary {
+            background: #fcf7f2;
+            border-left: 5px solid #d9996a;
+            padding: 1.4rem 1.8rem;
+            border-radius: 24px 12px 12px 24px;
+            margin: 1.8rem 0 2.2rem 0;
+        }
+
+        .summary p {
+            font-size: 1.05rem;
+            color: #3e2c20;
+        }
+
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            margin: 2.2rem 0 2.2rem 0;
+        }
+
+        .highlight-item {
+            flex: 1 1 180px;
+            background: #fefdfb;
+            border-radius: 28px;
+            padding: 1.4rem 1.2rem;
+            box-shadow: 0 4px 12px rgba(185, 126, 76, 0.08);
+            border: 1px solid #ece0d6;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #975a32;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .highlight-item p {
+            color: #4d3a2b;
+            font-size: 0.95rem;
+        }
+
+        .usage-scenario {
+            background: #f6eee7;
+            border-radius: 24px;
+            padding: 1.6rem 2rem;
+            margin: 2.2rem 0 2.2rem 0;
+        }
+
+        .usage-scenario h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #7f4b28;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        .usage-scenario p {
+            color: #3d2b1d;
+            margin-bottom: 0.8rem;
+        }
+
+        .usage-scenario ul {
+            list-style: none;
+            padding-left: 0.4rem;
+        }
+
+        .usage-scenario li {
+            padding: 0.35rem 0 0.35rem 1.6rem;
+            position: relative;
+            color: #3f2d1f;
+        }
+
+        .usage-scenario li::before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+            color: #b56e3c;
+            font-size: 1rem;
+        }
+
+        .faq-mini {
+            margin: 2.6rem 0 1.8rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 2rem;
+        }
+
+        @media (max-width: 520px) {
+            .faq-mini {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eadbcf;
+            padding-bottom: 0.8rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 600;
+            color: #6a4128;
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-item span {
+            color: #4d3827;
+            font-size: 0.9rem;
+        }
+
+        .access-note {
+            background: #faf3ea;
+            border-radius: 20px;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 0.8rem 0;
+            font-size: 0.95rem;
+            color: #3f2f21;
+            border: 1px solid #eddccc;
+        }
+
+        .access-note a {
+            color: #91562e;
+            font-weight: 500;
+            text-decoration: none;
+            background: #f3e3d6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            transition: background 0.2s, color 0.2s;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .access-note a:hover {
+            background: #d9996a;
+            color: #fff;
+        }
+
+        .footer-meta {
+            margin-top: 2.6rem;
+            font-size: 0.8rem;
+            color: #826b59;
+            text-align: center;
+            border-top: 1px solid #ebe0d6;
+            padding-top: 1.6rem;
+        }
+
+        .inline-link {
+            color: #91562e;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #e7cdb9;
+            transition: border-color 0.15s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #b36b38;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>捷报比分 · 赛事动态摘要</h1>
+        <div class="tagline">实时更新 · 贴近现场</div>
+    </div>
+
+    <div class="summary">
+        <p><strong>捷报比分</strong> 专注于提供赛事进程和比分变化信息，帮助关注体育的人快速掌握比赛节奏。无论是联赛、杯赛还是友谊赛，数据覆盖面较广，更新频率稳定，适合赛前参考与赛中跟踪。</p>
+    </div>
+
+    <div class="highlights">
+        <div class="highlight-item">
+            <h3>📊 数据丰富</h3>
+            <p>涵盖多个主流联赛及次级赛事，历史交锋、积分榜、近期战绩均可查阅，信息层次清晰。</p>
+        </div>
+        <div class="highlight-item">
+            <h3>⏱️ 动态刷新</h3>
+            <p>比赛进行时实时刷新比分与关键事件，减少等待，不错过进球、红黄牌等重要节点。</p>
+        </div>
+        <div class="highlight-item">
+            <h3>📱 适配灵活</h3>
+            <p>页面结构简洁，移动端浏览体验流畅，随时随地打开即可查看焦点战况。</p>
+        </div>
+    </div>
+
+    <div class="usage-scenario">
+        <h2>常见使用场景</h2>
+        <p>不论你是赛前做功课，还是赛中想快速了解其他场次，捷报比分都可以作为一个轻量的信息窗口：</p>
+        <ul>
+            <li>查看某支球队近期状态和交锋记录，辅助判断比赛走势</li>
+            <li>同时关注多场赛事，通过列表快速了解比分变化</li>
+            <li>赛后在平台上回顾最终比分及赛事数据</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">如果你正在找一款顺手且克制的比分工具，可以试试 <a href="https://portal-winscore.com" class="inline-link">捷报比分</a>，界面干净，没有过多干扰信息。</p>
+    </div>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <strong>⚽ 数据来自哪里？</strong>
+            <span>平台整合公开赛事数据源，保持相对及时的更新，但不代表绝对实时或官方认证。</span>
+        </div>
+        <div class="faq-item">
+            <strong>🏀 是否包含篮球？</strong>
+            <span>以足球赛事为主，同时覆盖部分篮球联赛，具体可在页面内通过筛选查看。</span>
+        </div>
+        <div class="faq-item">
+            <strong>📶 需要注册吗？</strong>
+            <span>浏览比分信息无需登录，部分个性化功能可能需要简单注册，非强制。</span>
+        </div>
+        <div class="faq-item">
+            <strong>🧭 信息准确吗？</strong>
+            <span>尽力保证数据准确，但极端情况下可能存在延迟或异常，建议多方对比确认。</span>
+        </div>
+    </div>
+
+    <div class="access-note">
+        <p>🔍 想进一步了解平台功能与赛事覆盖范围，可以直接访问 <a href="https://portal-winscore.com">捷报比分</a>，页面会展示当前热门比赛、联赛列表以及详细数据页。适合日常快速浏览，也适合深度数据爱好者按需查阅。</p>
+        <p style="margin-top: 0.6rem; font-style: italic; opacity: 0.8;">提示：部分高级数据模块可能需要稳定的网络环境，建议在 Wi-Fi 或信号良好的情况下使用。</p>
+    </div>
+
+    <div class="footer-meta">
+        内容说明 · 产品向介绍 ｜ 捷报比分 ｜ 信息仅供参考
+    </div>
+</div>
+</body>
+</html>
